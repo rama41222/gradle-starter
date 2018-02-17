@@ -1,7 +1,10 @@
-apply plugin: 'application'
 apply plugin: 'java'
 
-mainClassName = "com.example.Application"
+jar{
+    manifest{
+        attributes 'Main-Class' : 'com.example.Application'
+    }
+}
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
